@@ -1,0 +1,55 @@
+ <!-- 
+    DOM Traversal
+    1. parent() -- single level up
+    2. parentsd() -- all ancestors
+    3. children(), siblings()
+    4. eq() -- with specific number starting with index 0
+    5. remove() -- remove element
+    6. empty() -- remove childs
+  -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Getting Started</title>
+      <style>
+        h1 {
+            color: #1abc9c;
+        }
+        .rem {
+            margin-left: 5px;
+            background-color: white;
+            color: red;
+            border: none;
+            cursor: pointer;
+        }
+      </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>My To-Do List</h1>
+    <input type="text" placeholder="New item" />
+    <button id="add">Add</button>
+    <ol id="mylist"></ol>
+    <script>
+        $("#add").on("click", function() {
+            $(function() {
+                $("#add").on("click", function() {
+                    var val = $("input").val();
+                    if(val !== '') {
+                        var elem = $("<li></li>").text(val);
+                        $(elem).append("<button class='rem'>X</button>");
+                        $("#mylist").append(elem);
+                        $("input").val("");
+                        $(".rem").on("click", function() {
+                            $(this).parent().remove();
+                          });
+                    }
+                });
+            });
+          });
+    </script>
+  </body>
+  </html>

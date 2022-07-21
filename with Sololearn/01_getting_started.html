@@ -1,0 +1,48 @@
+<!-- 
+    The $ is used to access jQuery
+
+    
+jQuery is used to select (query) HTML elements and perform "actions" on them.
+Basic syntax is: $("selector").action()
+- The $ accesses jQuery.
+- The (selector) finds HTML elements.
+- The action() is then performed on the element(s).
+
+methods
+1.hide()
+2.html()
+3.attr()
+4.removeAttr()
+5.text()  -- text without html
+6.val()
+
+// adding content
+
+7. append()
+8. prepend()
+9. after()  -- to add html elements
+10.before()
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+     <div id="start">Start</div>
+     <img src="s6.png" alt="">
+     <button onclick="changeImg()">Change Img</button>
+     <script>
+            $("#start").html("Go!");
+            $("#start").after("<h1>Hello friend! How are you!</h1>");
+            function changeImg(){
+                let img1 = $("img").attr("src","s5.png");
+            }
+     </script>
+</body>
+</html>

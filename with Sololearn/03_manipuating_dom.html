@@ -1,0 +1,38 @@
+ <!-- 
+    DOM Traversal
+    1. parent() -- single level up
+    2. parentsd() -- all ancestors
+    3. children(), siblings()
+    4. eq() -- with specific number starting with index 0
+    5. remove() -- remove element
+    6. empty() -- remove childs
+  -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Getting Started</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <style>
+        .start{
+            background-color: aquamarine;
+            color: rebeccapurple;
+            font-size: 2rem;
+        }
+     </style>
+ </head>
+ <body>
+      <div id="start">Start</div>
+      <button onclick="changeImg()">Change style</button>
+      <script>
+             $("#start").html("Go!");
+             $("#start").after("<h1>Hello friend! How are you!</h1>");
+             $("#start").css("color","red");
+             function changeImg(){
+                 $("#start").addClass("start");
+             }
+      </script>
+ </body>
+ </html>

@@ -1,0 +1,34 @@
+<!-- 
+    all the events name are without "on" prefix
+    1. click( function)
+    2. on("event_name", fucntion) -- useful to bind multiple events.
+    3. off("event_name") --remove event handlers
+    
+    Events Objects
+    1.pageX, pageY member
+    2.which(),type(),... objects
+    3.trigger("event_name")
+ -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Getting Started</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <style>
+         
+      </style>
+  </head>
+  <body>
+       <div>a</div>
+       <script>
+        $("div").click(function(){
+            $("div").append("a");
+            $("div").off("click");
+        })
+       </script>
+       
+  </body>
+  </html>

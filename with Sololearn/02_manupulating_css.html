@@ -1,0 +1,43 @@
+<!-- 
+   Manupulating CSS:
+   1. addClass("") -- more than one class can be addded seprating by space.
+   2. removeClass("")
+   3. toggleClass("") -- adding removing the class
+
+   CSS property:
+   1.css() --: to set multiple css property , the css methods use the json syntax.
+
+   Dimentions
+   1. width(100): in px
+   2. height(100) in px
+   
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Getting Started</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <style>
+        .start{
+            background-color: aquamarine;
+            color: rebeccapurple;
+            font-size: 2rem;
+        }
+     </style>
+ </head>
+ <body>
+      <div id="start">Start</div>
+      <button onclick="changeImg()">Change style</button>
+      <script>
+             $("#start").html("Go!");
+             $("#start").after("<h1>Hello friend! How are you!</h1>");
+             $("#start").css("color","red");
+             function changeImg(){
+                 $("#start").addClass("start");
+             }
+      </script>
+ </body>
+ </html>
